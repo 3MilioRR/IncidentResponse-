@@ -18,4 +18,15 @@ detection:
 
 Traducción: Si alguien usa PowerShell para descargar cosas → sospechoso
 
+A continuación tienes un set de 50 reglas Sigma (simplificadas pero funcionales) listas para usar como base.
+
+⚠️ Importante:
+
+Están optimizadas para claridad y uso práctico, no para cubrir todos los edge cases.
+Deberás adaptar:
+- logsource
+- campos (Sysmon vs Security vs MDE)
+Úsalas como plantilla operativa, no como copy/paste ciego.
+
+## 50 reglas sigma
 
