@@ -29,3 +29,82 @@ Deberás adaptar:
 
 ## 50 reglas sigma
 
+### PowerShell / Execution
+
+```
+</> yaml
+title: Suspicious PowerShell Encoded Command
+logsource: {product: windows}
+detection:
+  selection:
+    CommandLine|contains: "EncodedCommand"
+  condition: selection
+```
+
+```
+title: PowerShell DownloadString
+logsource: {product: windows}
+detection:
+  selection:
+    CommandLine|contains: "DownloadString"
+  condition: selection
+```
+
+
+title: PowerShell Invoke-WebRequest
+logsource: {product: windows}
+detection:
+  selection:
+    CommandLine|contains: "Invoke-WebRequest"
+  condition: selection
+title: PowerShell from Office
+logsource: {product: windows}
+detection:
+  selection:
+    ParentImage|endswith:
+      - winword.exe
+      - excel.exe
+    Image|endswith: powershell.exe
+  condition: selection
+title: PowerShell IEX Usage
+logsource: {product: windows}
+detection:
+  selection:
+    CommandLine|contains: "IEX"
+  condition: selection
+title: PowerShell Hidden Window
+logsource: {product: windows}
+detection:
+  selection:
+    CommandLine|contains:
+      - "-nop"
+      - "-w hidden"
+  condition: selection
+title: PowerShell Base64 Long String
+logsource: {product: windows}
+detection:
+  selection:
+    CommandLine|re: "[A-Za-z0-9+/]{200,}"
+  condition: selection
+title: Suspicious Cmd Execution
+logsource: {product: windows}
+detection:
+  selection:
+    Image|endswith: cmd.exe
+    CommandLine|contains: "/c"
+  condition: selection
+title: Rundll32 Remote Execution
+logsource: {product: windows}
+detection:
+  selection:
+    Image|endswith: rundll32.exe
+    CommandLine|contains: "http"
+  condition: selection
+title: Regsvr32 Remote Script
+logsource: {product: windows}
+detection:
+  selection:
+    Image|endswith: regsvr32.exe
+    CommandLine|contains: "http"
+  condition: selection
+
