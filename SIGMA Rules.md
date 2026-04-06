@@ -240,3 +240,205 @@ detection:
     CommandLine|contains: "AppData"
   condition: selection
 ```
+
+### Privilege Escalation & Credential Access
+
+```
+</> yaml
+title: User Added to Administrators
+logsource: {product: windows}
+detection:
+  selection:
+    EventID: 4728
+  condition: selection
+```
+
+```
+</> yaml
+title: Special Privileges Assigned
+logsource: {product: windows}
+detection:
+  selection:
+    EventID: 4672
+  condition: selection
+```
+
+```
+</> yaml
+title: RunAs Execution
+logsource: {product: windows}
+detection:
+  selection:
+    CommandLine|contains: "runas"
+  condition: selection
+```
+
+```
+</> yaml
+title: LSASS Access
+logsource: {product: windows}
+detection:
+  selection:
+    TargetImage|endswith: lsass.exe
+  condition: selection
+```
+
+```
+</> yaml
+title: Credential Dump via Procdump
+logsource: {product: windows}
+detection:
+  selection:
+    CommandLine|contains: "procdump"
+  condition: selection
+```
+
+```
+</> yaml
+title: Mimikatz Indicators
+logsource: {product: windows}
+detection:
+  selection:
+    CommandLine|contains:
+      - mimikatz
+      - sekurlsa
+  condition: selection
+```
+
+```
+</> yaml
+title: SAM Hive Access
+logsource: {product: windows}
+detection:
+  selection:
+    CommandLine|contains: "SAM"
+  condition: selection
+```
+
+```
+</> yaml
+title: LSASS Memory Dump
+logsource: {product: windows}
+detection:
+  selection:
+    CommandLine|contains: "lsass"
+  condition: selection
+```
+
+```
+</> yaml
+title: Suspicious Token Manipulation
+logsource: {product: windows}
+detection:
+  selection:
+    EventID: 4673
+  condition: selection
+```
+
+```
+</> yaml
+title: Privileged Group Enumeration
+logsource: {product: windows}
+detection:
+  selection:
+    CommandLine|contains: "net group"
+  condition: selection
+```
+
+### Lateral Movement & Discovery
+
+```
+</> yaml
+title: Network Logon
+logsource: {product: windows}
+detection:
+  selection:
+    EventID: 4624
+    LogonType: 3
+  condition: selection
+```
+
+```
+</> yaml
+title: PsExec Usage
+logsource: {product: windows}
+detection:
+  selection:
+    CommandLine|contains: "psexec"
+  condition: selection
+```
+
+```
+</> yaml
+title: WMI Remote Execution
+logsource: {product: windows}
+detection:
+  selection:
+    CommandLine|contains: "wmic"
+  condition: selection
+title: WinRM Usage
+logsource: {product: windows}
+detection:
+  selection:
+    CommandLine|contains: "winrm"
+  condition: selection
+```
+
+```
+</> yaml
+title: RDP Logon
+logsource: {product: windows}
+detection:
+  selection:
+    EventID: 4624
+    LogonType: 10
+  condition: selection
+
+```
+</> yaml
+title: Whoami Execution
+logsource: {product: windows}
+detection:
+  selection:
+    CommandLine|contains: "whoami"
+  condition: selection
+```
+
+```
+</> yaml
+title: Netstat Execution
+logsource: {product: windows}
+detection:
+  selection:
+    CommandLine|contains: "netstat"
+  condition: selection
+
+```
+</> yaml
+title: IPConfig Execution
+logsource: {product: windows}
+detection:
+  selection
+    CommandLine|contains: "ipconfig"
+  condition: selection
+```
+
+```
+</> yaml
+title: NLTest Usage
+logsource: {product: windows}
+detection:
+  selection:
+    CommandLine|contains: "nltest"
+  condition: selection
+```
+
+```
+</> yaml
+title: Share Enumeration
+logsource: {product: windows}
+detection:
+  selection:
+    CommandLine|contains: "net share"
+  condition: selection
+```
