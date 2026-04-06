@@ -1,3 +1,4 @@
+<H1> SIGMA RULES </H1>
 Las reglas SIGMA son como plantillas genéricas para detectar actividad sospechosa en logs.
 
 👉 Piensa en ellas como:
@@ -6,13 +7,15 @@ Las reglas SIGMA son como plantillas genéricas para detectar actividad sospecho
 
 No están ligadas a una herramienta concreta. Luego se convierten a formatos específicos (Splunk, Elastic, Sentinel, etc.).
 
-🧠 Ejemplo sencillo
+🧠 Ejemplo sencillo (fichero YAML)
+<code>
 title: Uso sospechoso de PowerShell
 detection:
   selection:
     Image: powershell.exe
     CommandLine: "*DownloadString*"
   condition: selection
+</code>
 
 👉 Traducción:
 
