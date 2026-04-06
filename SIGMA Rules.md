@@ -581,10 +581,9 @@ detection:
   condition: selection1 AND selection2 AND NOT filter
 ```
 
-Este ejemplo haría sañltar una alarma si se cumplen las tres condiciones
+Este ejemplo haría saltar una alarma si y solo si se cumplen las tres condiciones
 
 ```
-</> yaml
 powershell.exe
 AND encoded command
 AND user != SYSTEM
