@@ -1,9 +1,9 @@
-<H1>POWER SHELL & EXECUTION (ADVANCED)</H1>
+<H1>POWER SHELL & EXECUTION</H1>
 
 ### PowerShell & Execution
 
 
-:one:   
+1️⃣   
 </> Ejecución sospechosa de PowerShell usando comandos codificados junto con patrones asociados con malware, movimiento lateral o evasión de defensa
 ```
 </> AAT&CK: T1059.001, T1027 - yaml
@@ -78,8 +78,8 @@ falsepositives:
 level: high
 ```
    
-:two:    
-</> Detecta uso sospechoso de DownloadString en PowerShell combinado con la ejecución de patrones comunmente asociados con entrega de malware y/o ataques fileless.
+2️⃣    
+### Detecta uso sospechoso de DownloadString en PowerShell combinado con la ejecución de patrones comunmente asociados con entrega de malware y/o ataques fileless.
 ```
 </> AAT&CK: T1105 - yaml - 
 title: Suspicious PowerShell DownloadString with Execution
@@ -133,7 +133,7 @@ level: high
 
 
 3️⃣   
-</> Detecta potencial uso sospechoso de Invoke-WebRequest en PowerShell, comunmente usado para descargar payloads
+### Detecta potencial uso sospechoso de Invoke-WebRequest en PowerShell, comunmente usado para descargar payloads
 ```
 </> AAT&CK: T1105 - yaml -
 title: Suspicious PowerShell Invoke-WebRequest Usage
@@ -187,7 +187,7 @@ tags:
 
 
 4️⃣    
-</> Detecta ejecucionn sospechosa de PowerShell desde aplicaciones Microsoft Offices, comunmente asociadas al uso de macros
+### Detecta ejecucionn sospechosa de PowerShell desde aplicaciones Microsoft Offices, comunmente asociadas al uso de macros
 ```
 </> AAT&CK: T1204, T1059.001 - yaml
 title: Suspicious PowerShell Spawned by Office Applications
