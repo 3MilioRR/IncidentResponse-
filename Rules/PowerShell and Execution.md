@@ -15,7 +15,7 @@ La categoría de reglas Sigma en relación al uso de PowerShell Execution, descr
 6. Detecta la ejecución de PowerShell con parámetros de ocultación o evasión como ventanas ocultas [🔗](#detecta-la-ejecución-de-powershell-con-parámetros-de-ocultación-o-evasión-como-ventanas-ocultas)
 7. Detecta el uso de comandos PowerShell codificados o cadenas largas en Base64 en la línea de comandos [🔗](#detecta-el-uso-de-comandos-powershell-codificados-o-cadenas-largas-en-base64-en-la-línea-de-comandos)
 8. Detecta ejecuciones de cmd.exe con el parámetro /c junto a patrones comúnmente asociados a actividades maliciosas [🔗](#detecta-ejecuciones-de-cmd.exe-con-el-parámetro-c-junto-a-patrones-comúnmente-asociados-a-actividades-maliciosas)
-9. Detecta el uso sospechoso de rundll32.exe para ejecutar contenido remoto o scripts [🔗](#detecta-el-uso-sospechoso-de-rundll32.exe-para-ejecutar-contenido-remoto-o-scripts)
+9. Detecta el uso sospechoso de rundll32.exe para ejecutar contenido remoto o scripts [🔗](#detecta-el-uso-sospechoso-de-rundll32-exe-para-ejecutar-contenido-remoto-o-scripts)
 10. Detecta el uso sospechoso de regsvr32.exe para ejecutar scripts remotos mediante la técnica Squiblydoo [🔗](#detecta-el-uso-sospechoso-de-regsvr32.exe-para-ejecutar-scripts-remotos-mediante-la-técnica-Squiblydoo)
 
 
