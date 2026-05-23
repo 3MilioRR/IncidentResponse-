@@ -1,12 +1,14 @@
 <H1>POWER SHELL & EXECUTION</H1>
 
-La categoría de reglas Sigma en relación al uso de PowerShell Execution, describen la actividad sospechosa relacionada con el uso de este intérprete de comandos y scripting. Buscan lo siguinete:
-- Identificación de la fuente: Apuntan a los registros de Windows o Sysmon 
+### PowerShell & Execution
+
+La categoría de reglas Sigma en relación al uso de PowerShell Execution, describen la actividad sospechosa relacionada con el uso de este intérprete de comandos y scripting. Buscan lo siguiente:
+
+- Identificación de la fuente: Apuntan a los registros de Windows o Sysmon   
 - Lógica de detección: Definen selecciones de palabras clave maliciosas o técnicas de evasión, como el uso de comandos codificados (-EncodedCommand), descarga de archivos de internet (Net.WebClient), ofuscación mediante operadores bit a bit (-bxor) o intentos de limpiar el registro de eventos.
 
 
-### PowerShell & Execution
-
+<H3>REGLAS</H3>
 
 1️⃣   
 </> Ejecución sospechosa de PowerShell usando comandos codificados junto con patrones asociados con malware, movimiento lateral o evasión de defensa
