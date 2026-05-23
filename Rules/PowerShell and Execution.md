@@ -7,15 +7,18 @@ La categoría de reglas Sigma en relación al uso de PowerShell Execution, descr
 - Identificación de la fuente: Apuntan a los registros de Windows o Sysmon   
 - Lógica de detección: Definen selecciones de palabras clave maliciosas o técnicas de evasión, como el uso de comandos codificados (-EncodedCommand), descarga de archivos de internet (Net.WebClient), ofuscación mediante operadores bit a bit (-bxor) o intentos de limpiar el registro de eventos.
 
+1. Ejecución sospechosa de PowerShell usando comandos codificados junto con patrones asociados con malware, movimiento lateral o evasión de defensa [🔗](#ejecución-sospechosa-de-powershell-usando-comandos-codificados-junto-con-patrones-asociados-con-malware-movimiento-lateral-o-evasión-de-defensas)
+2. Uso sospechoso de DownloadString en PowerShell combinado con la ejecución de patrones comunmente asociados con entrega de malware y ataques fileless [🔗](#detecta-uso-sospechoso-de-downloadString-en-powershell-combinado-con-la-ejecución-de-patrones-comunmente-asociados-con-entrega-de-malware-y-ataques-fileless)
+3. 
 
 <H3>REGLAS</H3>
 
 
 
 1️⃣   
-### Ejecución sospechosa de PowerShell usando comandos codificados junto con patrones asociados con malware, movimiento lateral o evasión de defensa
-```
+### Ejecución sospechosa de PowerShell usando comandos codificados junto con patrones asociados con malware, movimiento lateral o evasión de defensas
 </> AAT&CK: T1059.001, T1027 - yaml
+```
 title: Suspicious PowerShell Encoded Command Execution
 id: 14r92d-ps-encodedcommand-002
 status: experimental
@@ -88,9 +91,9 @@ level: high
 ```
    
 2️⃣    
-### Detecta uso sospechoso de DownloadString en PowerShell combinado con la ejecución de patrones comunmente asociados con entrega de malware y/o ataques fileless.
-```
+### Detecta uso sospechoso de DownloadString en PowerShell combinado con la ejecución de patrones comunmente asociados con entrega de malware y ataques fileless
 </> AAT&CK: T1105 - yaml - 
+```
 title: Suspicious PowerShell DownloadString with Execution
 id: 14r92d-ps-downloadstring-001
 status: experimental
