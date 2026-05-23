@@ -9,7 +9,15 @@ La categoría de reglas Sigma en relación al uso de PowerShell Execution, descr
 
 1. Ejecución sospechosa de PowerShell usando comandos codificados junto con patrones asociados con malware, movimiento lateral o evasión de defensa [🔗](#ejecución-sospechosa-de-powershell-usando-comandos-codificados-junto-con-patrones-asociados-con-malware-movimiento-lateral-o-evasión-de-defensas)
 2. Uso sospechoso de DownloadString en PowerShell combinado con la ejecución de patrones comunmente asociados con entrega de malware y ataques fileless [🔗](#detecta-uso-sospechoso-de-downloadString-en-powershell-combinado-con-la-ejecución-de-patrones-comunmente-asociados-con-entrega-de-malware-y-ataques-fileless)
-3. 
+3. Detecta potencial uso sospechoso de Invoke WebRequest en PowerShell, comunmente usado para descargar payloads [🔗](#detecta-otencial-uso-sospechoso-de-Invoke-WebRequest-en-PowerShell)
+4. Detecta ejecucionn sospechosa de PowerShell desde aplicaciones Microsoft Offices, comunmente asociadas al uso de macros [🔗](#detecta-ejecucion-sospechosa-de-powershell-desde-aplicaciones-microsoft-offices)
+5. Detecta uso sospechoso de Invoke-Expression (IEX) en PowerShell [🔗](#detecta-uso-sospechoso-de-Invoke-Expression-en-powershell)
+6. Detecta la ejecución de PowerShell con parámetros de ocultación o evasión como ventanas ocultas [🔗](#detecta-la-ejecución-de-powershell-con-parámetros-de-ocultación-o-evasión-como-ventanas-ocultas)
+7. Detecta el uso de comandos PowerShell codificados o cadenas largas en Base64 en la línea de comandos [🔗](#detecta-el-uso-de-comandos-powershell-codificados-o-cadenas-largas-en-base64-en-la-línea-de-comandos)
+8. Detecta ejecuciones de cmd.exe con el parámetro /c junto a patrones comúnmente asociados a actividades maliciosas [🔗](#detecta-ejecuciones-de-cmd.exe-con-el-parámetro-c-junto-a-patrones-comúnmente-asociados-a-actividades-maliciosas)
+9. Detecta el uso sospechoso de rundll32.exe para ejecutar contenido remoto o scripts [🔗](#detecta-el-uso-sospechoso-de-rundll32.exe-para-ejecutar-contenido-remoto-o-scripts)
+10. Detecta el uso sospechoso de regsvr32.exe para ejecutar scripts remotos mediante la técnica Squiblydoo [🔗](#detecta-el-uso-sospechoso-de-regsvr32.exe-para-ejecutar-scripts-remotos-mediante-la-técnica-Squiblydoo)
+
 
 <H3>REGLAS</H3>
 
@@ -92,7 +100,7 @@ level: high
    
 2️⃣    
 ### Detecta uso sospechoso de DownloadString en PowerShell combinado con la ejecución de patrones comunmente asociados con entrega de malware y ataques fileless
-</> AAT&CK: T1105 - yaml - 
+</> AAT&CK: T1105 - yaml
 ```
 title: Suspicious PowerShell DownloadString with Execution
 id: 14r92d-ps-downloadstring-001
@@ -145,9 +153,9 @@ level: high
 
 
 3️⃣   
-### Detecta potencial uso sospechoso de Invoke-WebRequest en PowerShell, comunmente usado para descargar payloads
+### Detecta potencial uso sospechoso de Invoke WebRequest en PowerShell
+</> AAT&CK: T1105 - yaml
 ```
-</> AAT&CK: T1105 - yaml -
 title: Suspicious PowerShell Invoke-WebRequest Usage
 id: 3c8b9d6a-ps-iwr-suspicious
 status: experimental
@@ -199,7 +207,7 @@ tags:
 
 
 4️⃣    
-### Detecta ejecucionn sospechosa de PowerShell desde aplicaciones Microsoft Offices, comunmente asociadas al uso de macros
+### Detecta ejecucion sospechosa de PowerShell desde aplicaciones Microsoft Offices
 ```
 </> AAT&CK: T1204, T1059.001 - yaml
 title: Suspicious PowerShell Spawned by Office Applications
@@ -256,10 +264,10 @@ tags:
 ``
 ```
 
-:five:    
-</> Detecta uso sospechoso de Invoke-Expression (IEX) en PowerShell
-```
+5️⃣    
+### Detecta uso sospechoso de Invoke-Expression en PowerShell
 </> AAT&CK: T1059.001 - yaml
+```
 title: Suspicious PowerShell Invoke-Expression (IEX) Usage
 id: 7c2f1a9d-ps-iex
 status: experimental
@@ -309,9 +317,9 @@ tags:
 ```
 
 6️⃣    
-</> Detecta la ejecución de PowerShell con parámetros de ocultación o evasión como ventanas ocultas
-```
+### Detecta la ejecución de PowerShell con parámetros de ocultación o evasión como ventanas ocultas
 </> AAT&CK: T1564, T1059.001 - yaml
+```
 title: PowerShell Hidden or Silent Execution Flags
 id: 5a6b9c21-ps-hidden, 
 status: experimental
@@ -365,10 +373,10 @@ tags:
   - attack.t1564
 ```
 
-:seven:     
-</> Detecta el uso de comandos PowerShell codificados o cadenas largas en Base64 en la línea de comandos
-```
+7️⃣     
+### Detecta el uso de comandos PowerShell codificados o cadenas largas en Base64 en la línea de comandos
 </> AAT&CK: T1027 - yaml
+```
 title: Suspicious PowerShell Encoded Command or Long Base64 String
 id: 8f4c2a7d-ps-base64
 status: experimental
@@ -412,9 +420,9 @@ tags:
 ```
 
 8️⃣    
-</> Detecta ejecuciones de cmd.exe con el parámetro /c junto a patrones comúnmente asociados a actividades maliciosas
-```
+### Detecta ejecuciones de cmd.exe con el parámetro /c junto a patrones comúnmente asociados a actividades maliciosas
 </> AAT&CK: T1059.003 - yaml
+```
 title: Suspicious CMD Execution with Potential Malicious Context
 id: d3f9a2b1-cmd-suspicious
 status: experimental
@@ -471,9 +479,9 @@ tags:
 ```
 
 9️⃣    
-</> Detecta el uso sospechoso de rundll32.exe para ejecutar contenido remoto o scripts
-```
+### Detecta el uso sospechoso de rundll32.exe para ejecutar contenido remoto o scripts
 </> AAT&CK: T1218.011 - yaml
+```
 title: Suspicious Rundll32 Remote or Script Execution
 id: a1c7b3e9-rundll32-remote
 status: experimental
@@ -524,10 +532,10 @@ tags:
   - attack.t1218.011
 ```
 
-:one:0️⃣    
-</> Detecta el uso sospechoso de regsvr32.exe para ejecutar scripts remotos mediante la técnica Squiblydoo
-```
+1️⃣0️⃣    
+### Detecta el uso sospechoso de regsvr32.exe para ejecutar scripts remotos mediante la técnica Squiblydoo
 </> AAT&CK: T1218.010 - yaml
+```
 title: Suspicious Regsvr32 Remote Script Execution (Squiblydoo)
 id: e4b2c6f8-regsvr32-remote
 status: experimental
