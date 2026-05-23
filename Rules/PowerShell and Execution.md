@@ -9,14 +9,14 @@ La categoría de reglas Sigma en relación al uso de PowerShell Execution, descr
 
 1. Ejecución sospechosa de PowerShell usando comandos codificados junto con patrones asociados con malware, movimiento lateral o evasión de defensa [🔗](#ejecución-sospechosa-de-powershell-usando-comandos-codificados-junto-con-patrones-asociados-con-malware-movimiento-lateral-o-evasión-de-defensas)
 2. Uso sospechoso de DownloadString en PowerShell combinado con la ejecución de patrones comunmente asociados con entrega de malware y ataques fileless [🔗](#detecta-uso-sospechoso-de-downloadString-en-powershell-combinado-con-la-ejecución-de-patrones-comunmente-asociados-con-entrega-de-malware-y-ataques-fileless)
-3. Detecta potencial uso sospechoso de Invoke WebRequest en PowerShell, comunmente usado para descargar payloads [🔗](#detecta-otencial-uso-sospechoso-de-Invoke-WebRequest-en-PowerShell)
+3. Detecta potencial uso sospechoso de Invoke WebRequest en PowerShell, comunmente usado para descargar payloads [🔗](#detecta-otencial-uso-sospechoso-de-invoke-webrequest-en-powershell)
 4. Detecta ejecucionn sospechosa de PowerShell desde aplicaciones Microsoft Offices, comunmente asociadas al uso de macros [🔗](#detecta-ejecucion-sospechosa-de-powershell-desde-aplicaciones-microsoft-offices)
-5. Detecta uso sospechoso de Invoke-Expression (IEX) en PowerShell [🔗](#detecta-uso-sospechoso-de-Invoke-Expression-en-powershell)
+5. Detecta uso sospechoso de Invoke-Expression (IEX) en PowerShell [🔗](#detecta-uso-sospechoso-de-invoke-expression-en-powershell)
 6. Detecta la ejecución de PowerShell con parámetros de ocultación o evasión como ventanas ocultas [🔗](#detecta-la-ejecución-de-powershell-con-parámetros-de-ocultación-o-evasión-como-ventanas-ocultas)
 7. Detecta el uso de comandos PowerShell codificados o cadenas largas en Base64 en la línea de comandos [🔗](#detecta-el-uso-de-comandos-powershell-codificados-o-cadenas-largas-en-base64-en-la-línea-de-comandos)
-8. Detecta ejecuciones de cmd.exe con el parámetro /c junto a patrones comúnmente asociados a actividades maliciosas [🔗](#detecta-ejecuciones-de-cmd.exe-con-el-parámetro-c-junto-a-patrones-comúnmente-asociados-a-actividades-maliciosas)
+8. Detecta ejecuciones de cmd.exe con el parámetro /c junto a patrones comúnmente asociados a actividades maliciosas [🔗](#detecta-ejecuciones-de-cmdexe-con-el-parámetro-c-junto-a-patrones-comúnmente-asociados-a-actividades-maliciosas)
 9. Detecta el uso sospechoso de rundll32.exe para ejecutar contenido remoto o scripts [🔗](#detecta-el-uso-sospechoso-de-rundll32exe-para-ejecutar-contenido-remoto-o-scripts)
-10. Detecta el uso sospechoso de regsvr32.exe para ejecutar scripts remotos mediante la técnica Squiblydoo [🔗](#detecta-el-uso-sospechoso-de-regsvr32.exe-para-ejecutar-scripts-remotos-mediante-la-técnica-Squiblydoo)
+10. Detecta el uso sospechoso de regsvr32.exe para ejecutar scripts remotos mediante la técnica Squiblydoo [🔗](#detecta-el-uso-sospechoso-de-regsvr32exe-para-ejecutar-scripts-remotos-mediante-la-técnica-squiblydoo)
 
 
 <H3>REGLAS</H3>
