@@ -5,3 +5,4 @@
 2. https://osint.com.ar/powershell-para-la-respuesta-a-incidentes-en-windows/
 
 #Linux
+1. https://www.hackingarticles.in/incident-response-linux-cheatsheet/
