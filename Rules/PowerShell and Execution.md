@@ -10,8 +10,10 @@ La categoría de reglas Sigma en relación al uso de PowerShell Execution, descr
 
 <H3>REGLAS</H3>
 
+
+
 1️⃣   
-</> Ejecución sospechosa de PowerShell usando comandos codificados junto con patrones asociados con malware, movimiento lateral o evasión de defensa
+### Ejecución sospechosa de PowerShell usando comandos codificados junto con patrones asociados con malware, movimiento lateral o evasión de defensa
 ```
 </> AAT&CK: T1059.001, T1027 - yaml
 title: Suspicious PowerShell Encoded Command Execution
