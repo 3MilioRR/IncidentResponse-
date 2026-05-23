@@ -1,6 +1,6 @@
-<h1>Repositorios de reglas SIGMSA</h1>
+<h1>Repositorios de reglas SIGMA</h1>
 
-
+🔗 URLs
 1. SIGMA HQ: https://github.com/SigmaHQ/sigma
 2. mdecrevoisier - SIGMA-detection-rules: https://github.com/mdecrevoisier/SIGMA-detection-rules
 3. anil yelken - sigma-rules: https://github.com/anil-yelken/sigma-rules
