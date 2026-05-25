@@ -11,8 +11,9 @@ La gran ventaja de las reglas Sigma es que son independientes de la plataforma. 
 3. Enlaces a conversores de reglas SIGMA según la plataforma que operes.
 4. Algunos enlaces a artículos de interés.
 
-Además, he creado un tablero de start.me con una coleccion de recursos relacionados con la gestión de incidentes (guías IR, play books de respuesta, ...)
+
+Además, he creado un tablero de start.me con una coleccion de recursos relacionados con la gestión de incidentes (guías IR, play books de respuesta, ...)    
 🔗 https://start.me/p/gGrzRK/ir   
 
 
-##Suerte
+##Suerte 
